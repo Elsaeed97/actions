@@ -3,3 +3,13 @@ name: Issue Comment Workflow
 on:
   issues:
     types: [opened]
+
+jobs:
+  comment-with-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Dump Github context"
+        run: echo '${{ toJSON(github.event) }}' | jq
+        shell: bash
+
+
