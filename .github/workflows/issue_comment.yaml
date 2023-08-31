@@ -1,0 +1,5 @@
+name: Issue Comment Workflow
+
+on:
+  issues:
+    types: [opened]
